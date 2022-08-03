@@ -10,29 +10,33 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,900" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   </head>
 <body>
 
-<header>
-  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png" style="height:100px;float:left" >
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#Mens Team">Men's Team</a></li>
-    <li><a href="#Womens Team">Women's Team</a></li>
-  </ul>
-</header>
+  <nav class="navbar">
+    <a href="#" class="nav-logo"><img id="img-header" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png" > </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="mens.html">Men's Team</a></li>
+      <li><a href="womens.html">Women's Team</a></li>
+      <li><a href="#Shop">Shop</a></li>
+      <li><a href="login.html"><i class="fa fa-sign-in" aria-hidden="true"></i> Log In</a></li>
 
-<section>
+    </ul>
+  </nav>
+
+
+<section style="margin-top: -1.3%;">
    
-  <article style="height: 100%;width: 100%;">
-    <div class="container" style="max-width: 100%;height:100%"> 
+  <article>
+    <div class="container" style="max-width: 70%;max-height:50%"> 
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -42,17 +46,17 @@
         </ol>
     
         <!-- Wrapper for slides -->
-        <div class="carousel-inner">
+        <div class="carousel-inner" >
           <div class="item active">
-            <center><img src="https://pbs.twimg.com/media/FMOjAx4WUAwgw3X.jpg:large" style="width:75%;max-height: 100%;"></center>
+            <img class="crsl" src="https://pbs.twimg.com/media/FMOjAx4WUAwgw3X.jpg:large" >
           </div>
     
           <div class="item">
-          <center><img src="https://idsb.tmgrup.com.tr/ly/uploads/images/2021/05/30/118038.jpg"  style="width:75%;height: 100%;"></center>
+          <img class="crsl" src="https://idsb.tmgrup.com.tr/ly/uploads/images/2021/05/30/118038.jpg"  >
           </div>
 
           <div class="item">
-            <center><img src="https://static01.nyt.com/images/2022/05/24/sports/24soccer-chelsea-lead/24soccer-chelsea-lead-videoSixteenByNine3000.jpg" style="width:75%;max-height: 100%;"></center>
+            <img class="crsl" src="https://static01.nyt.com/images/2022/05/24/sports/24soccer-chelsea-lead/24soccer-chelsea-lead-videoSixteenByNine3000.jpg">
           </div>
         
         </div>
@@ -72,26 +76,26 @@
 </section>
 
 
-<hr style="margin-top: 40px;position: relative;" width="75%">
+<center><hr style="margin-top: 40px;" width="75%"></center>
 <!-- cards -->
-
+<section style="margin-left: 5%;">
 <h2 style="margin-top: 40px" id="news">News</h2>
 <div class="container"  style="margin-top: 40px">
   <div class="row">
-    <div class="col-md-4">
+    <div>
       <div class="card card-1">
         <h3>Ionic Native</h3>
         <p>A curated set of   ES5/ES6/TypeScript wrappers for plugins to easily add any native functionality to your Ionic apps.</p>
       </div>
     </div>
-    <div class="col-md-4">
+    <div>
       <div class="card card-2">
         <h3>UI Components</h3>
         <p>Tabs, buttons, inputs, lists, cards, and more! A comprehensive library
-          of mobile UI components, ready to go.</p>
+            of mobile UI components, ready to go.</p>
       </div>
     </div>
-    <div class="col-md-4">
+    <div>
       <div class="card card-3">
         <h3>Theming</h3>
         <p>Learn how to easily customize and modify your app’s design to fit your
@@ -100,40 +104,9 @@
     </div>
   </div>
 </div>
+</section>
 
 
-<!-- grid -->
-
-<div class="demo" id="Mens Team">
-  <h2 class="penName">Mens First Team</h2>
-  <div class="mainCard">
-    <div class="mainCardHeader"></div>
-    <div class="mainCardContent">
-      <div class="miniCard" > <img src="https://pbs.twimg.com/media/FXj_teWUIAAWG8v?format=jpg&name=large" style="width: 100%;height: 100%;"> </div>
-      <div class="miniCard"> <img src="https://pbs.twimg.com/media/FCYzjEGXIAUIm2p?format=jpg&name=4096x4096" style="width: 100%;height: 100%;"></div>
-      <div class="miniCard"> <img src="https://cdn.mos.cms.futurecdn.net/6pkWMYrzAKhMhLV4S8k8s5-1200-80.jpg" style="width: 100%;height: 100%;"></div>
-      <div class="miniCard" style="background-color: blue"> </div>
-      <div class="miniCard" style="background-color: blue"></div>
-      <div class="miniCard" style="background-color: blue"></div>
-    </div>
-  </div>
-
-
-  <div class="demo" id="Womens Team">
-    <h2 class="penName">Womens First Team</h2>
-    <div class="mainCard">
-      <div class="mainCardHeader"></div>
-      <div class="mainCardContent">
-        <div class="miniCard"> <img src="https://cdn.vox-cdn.com/thumbor/zZDobYkhh9Qj62Xe29Sp76L4I7k=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23067062/1357300213.jpg" style="max-width: 100%;height: 100%;"></div>
-        <div class="miniCard"> <img src="https://pbs.twimg.com/media/FF3fyDeX0AYAfRs.jpg:large" style="max-width: 100%;max-height: 100%;"></div>
-        <div class="miniCard"> <img src="https://cdn.vox-cdn.com/thumbor/iYgxP17nKM_xgv0Tx5imWX4mM8c=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/21845051/1270090175.jpg.jpg" style="max-width: 100%;height: 100%;"></div>
-        <div class="miniCard" style="background-color: blue"> </div>
-      <div class="miniCard" style="background-color: blue"></div>
-      <div class="miniCard" style="background-color: blue"></div>
-      </div>
-    </div>
-    
-  </div>
 
 
 
