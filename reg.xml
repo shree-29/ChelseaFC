@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE register SYSTEM "reg.dtd">
+
+<register>
+        <user id="101">
+            <first_Name type="must">Mason</first_Name>
+            <last_Name type="must">Mount</last_Name>
+            <email type="must">mm@gmail.com</email>
+            <password type="must">coyb19</password>
+            <re_type_Password>coyb19</re_type_Password>
+            <country>India</country>
+            <mobile_No>6390076563</mobile_No>
+        </user>
+        <user id="102">
+            <first_Name type="must">Raheem</first_Name>
+            <last_Name type="must">Sterling</last_Name>
+            <email type="must">rs@gmail.com</email>
+            <password type="must">mancityistrash</password>
+            <re_type_Password>mancityistrash</re_type_Password>
+            <country>Jamaica</country>
+            <mobile_No>8976548910</mobile_No>
+        </user>
+</register>

@@ -1,0 +1,15 @@
+<!ELEMENT register (user+)>
+<!ELEMENT user (first_Name,last_Name,email,password,re_type_Password,country,mobile_No)>
+<!ELEMENT first_Name (#PCDATA)>
+<!ELEMENT last_Name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT password (#PCDATA)>
+<!ELEMENT re_type_Password (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT mobile_No (#PCDATA)>
+
+<!ATTLIST user id CDATA #REQUIRED>
+<!ATTLIST first_Name type CDATA #REQUIRED>
+<!ATTLIST last_Name type CDATA #REQUIRED>
+<!ATTLIST password type CDATA #REQUIRED>
+<!ATTLIST email type CDATA #REQUIRED>
