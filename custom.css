@@ -37,6 +37,11 @@
     width: 60%;
    }
 
+   .flex-header{
+    display: flex;
+    justify-content:space-between;
+  }
+
    @media (max-width: 576px) {
     .nav-item{
       background-color:blue;
@@ -78,6 +83,7 @@
       height: auto;
     }
   }
+
 
 
   /*----------------- cards------------------ */
