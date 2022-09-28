@@ -21,7 +21,7 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-      <script src="loader.js" type="javascript/text"></script>
+    
   </head>
 <body>
 
@@ -174,5 +174,29 @@
 
 
 </body>
+<script>
+  fetch("/news.json")
+.then(function (response) {
+    return response.json();
+})
+.then(function (data) {
+    alert("hi");
+    appendData(data);
+})
+.catch(function (err) {
+    alert("err");
+    console.log('error: ' + err);
+});
+function appendData(data) {
+
+for (var i = 0; i < data.length; i++) {
+    var title = document.getElementById("title-".concat((i+1).toString()));
+    var desc = document.getElementById("desc-".concat((i+1).toString()));
+
+    title.innerHTML=data[i].title;
+    desc.innerHTML=data[i].desc;
+}
+}
+</script>
 </html>
 
