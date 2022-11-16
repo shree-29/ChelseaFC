@@ -11,6 +11,17 @@
     background-size: cover;
     background-attachment:fixed;
   }
+  .sample.ng-valid:focus{
+    color: green;
+  }
+  .sample.ng-invalid:focus{
+    color: red;
+  }
+
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
   
   #img-header{
       margin-top: 2%;
@@ -24,6 +35,9 @@
     height: 100vh;
   }
   
+ 
+
+
   .box {
     width: 30%;
     height: fit-content;

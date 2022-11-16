@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   </head>
-<body>
+<body ng-app="prwpst" ng-controller="pctrl">
 
   <nav class="navbar navbar-expand-sm fixed-top" style="background-color:blue;height: 20vh;">
     <div class="container" style="width:30vh ;display:inline">
@@ -34,12 +34,11 @@
 
     <div id="navbarCollapse" class="collapse navbar-collapse">
     <ul class="navbar-nav ml-auto" style="margin-left:30%;">
-        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-        <li class="nav-item"><a href="#news" class="nav-link active">News</a></li>
-        <li class="nav-item"><a href="mens.html" class="nav-link active">Men's Team</a></li>
-        <li class="nav-item"><a href="womens.html" class="nav-link active">Women's Team</a></li>
-        <li class="nav-item"><a href="#" class="nav-link active">Shop</a></li>
-        <li class="nav-item"><a href="login.html" class="nav-link active"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign in</a></li>
+      <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+      <li class="nav-item"><a href="match.html" class="nav-link active">Match</a></li>
+      <li class="nav-item"><a href="mens.html" class="nav-link active">Men's Team</a></li>
+      <li class="nav-item"><a href="womens.html" class="nav-link active">Women's Team</a></li>
+      <li class="nav-item"><a href="login.html" class="nav-link active"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign in</a></li>
     </ul>
     </div>
 
@@ -53,12 +52,7 @@
     <div class="mainCard">
       <div class="mainCardHeader"></div>
       <div class="mainCardContent">
-        <div class="miniCard"> <img src="https://preview.redd.it/5forxfme9s381.jpg?width=640&crop=smart&auto=webp&s=b52d633a855b171f1a5c64b32db0bec2b94b5c1b" style="max-width: 100%;height: 100%;"></div>
-        <div class="miniCard"> <img src="https://i.guim.co.uk/img/media/26ca72e7845ca13e2ad6eab95f4ea1e62bb10c61/1163_359_1693_2116/master/1693.jpg?width=700&quality=85&auto=format&fit=max&s=5368216204063e08faf224b89fa25966" style="max-width: 100%;height: 100%;"></div>
-        <div class="miniCard"> <img src="https://cdn.vox-cdn.com/thumbor/iYgxP17nKM_xgv0Tx5imWX4mM8c=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/21845051/1270090175.jpg.jpg" style="max-width: 100%;height: 100%;"></div>
-        <div class="miniCard" ><img src="https://64.media.tumblr.com/633cd206e51bbd36faec28f91c1bcbcf/9b83e106d71fa9df-6c/s1280x1920/c78048f0c0a8e20e58676595e639ba5459431050.jpg" style="width: 100%;height: 100%;" ></div>
-        <div class="miniCard" ><img src="https://cdn.mos.cms.futurecdn.net/u9TeX7s4DBprZWs2Uwvjw7.jpg" style="width: 100%;height: 100%;" ></div>
-        <div class="miniCard" ><img src="https://pbs.twimg.com/media/FKM_T3yXMAU4ge-?format=jpg&name=4096x4096" style="width: 100%;height: 100%;" ></div>
+        <div class="miniCard" ng-repeat="card in cards"> <img src="{{card.img}}" style="width: 100%;height: 100%;"> <br> <p >{{card.name}} </p> <p>{{card.jersey}}</p> <br></div>
       </div>
     </div>
     
@@ -68,4 +62,18 @@
 
 
 </body>
+<script type="text/javascript">
+  var app=angular.module('prwpst', []);
+
+  app.controller('pctrl', function($scope, $http) {
+    $http({
+            method: 'GET',
+            url: "http://localhost:3000/loadWomen"
+            }).then(function success(response) {
+                $scope.cards=response.data;
+                }, function error(response) {
+                }
+            );
+    });
+  </script>
 </html>

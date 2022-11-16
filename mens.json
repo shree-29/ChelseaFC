@@ -1,0 +1,32 @@
+[
+    {
+        "img":"https://pbs.twimg.com/media/FXj_teWUIAAWG8v?format=jpg&name=large",
+        "name":"Raheem Sterling",
+        "jersey":"No. 17"
+    },
+    {
+        "img":"https://pbs.twimg.com/media/FCYzjEGXIAUIm2p?format=jpg&name=4096x4096",
+        "name":"Mason Mount",
+        "jersey":"No. 19"
+    },
+    {
+        "img":"https://cdn.mos.cms.futurecdn.net/6pkWMYrzAKhMhLV4S8k8s5-1200-80.jpg",
+        "name":"Reece James",
+        "jersey":"No. 24"
+    },
+    {
+        "img":"https://pbs.twimg.com/media/FXwtbHUVEAQ949E?format=jpg&name=900x900",
+        "name":"Kalidou Koulibaly",
+        "jersey":"No. 26"
+    },
+    {
+        "img":"https://chelseafcnepal.com/wp-content/uploads/2020/11/276767.jpg",
+        "name":"Cristian Pulisic",
+        "jersey":"No. 10"
+    },
+    {
+        "img":"https://cdn.mos.cms.futurecdn.net/ByvWrhxRDxtjpuwSAVMRrL.jpg",
+        "name":"Edouard Mendy",
+        "jersey":"No. 16"
+    }
+]
