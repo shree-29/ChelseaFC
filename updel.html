@@ -20,21 +20,21 @@
   </head>
 
   <body ng-app="" style="background-color:paleturquoise">
-
+    
 
 	<div class="section">
 		<div class="container">
 			<div class="row full-height justify-content-center">
 				<div class="col-12 text-center align-self-center py-5">
 					<div class="section pb-5 pt-5 pt-sm-2 text-center">
-						<h6 class="mb-0 pb-3" ><span> Match details</span><span>Team details</span></h6>
+						<h6 class="mb-0 pb-3" ><span> Update Match details</span><span> Delete Team details</span></h6>
 			          	<input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
 			          	<label for="reg-log"></label>
 						<div class="card-3d-wrap mx-auto">
 							<div class="card-3d-wrapper">
 								<div class="card-front">
 									<div class="center-wrap">
-                                        <form name="matchdetails" action="/matchDet" method="post">
+                                        <form name="matchdetails" action="/updateMat" method="post">
 										<div class="section text-center">
                                             <div class="form-group mt-2" style="color: #c4c3ca;">
 												<input type="radio" name="match" value="Away" id="match" autocomplete="off" checked="True"> <label>Away</label> &emsp;
@@ -45,10 +45,7 @@
 												<input type="text" name="oppname" class="form-style" placeholder="Opponent Name" id="oppname" autocomplete="off">
 												
 											</div>
-                                            <div class="form-group mt-2">
-												<input type="text" name="oppimg" class="form-style" placeholder="Img src" id="oppimg" autocomplete="off">
-												
-											</div>
+                                            
 											<div class="form-group">
 												<input type="text" name="league" class="form-style" placeholder="League" id="league" autocomplete="off">
 												
@@ -66,33 +63,31 @@
 												<input type="text" name="venue" class="form-style" placeholder="Venue" id="venue" autocomplete="off">
 												
 											</div>
-											<input type="submit" value="Submit" class="btn mt-4"/>
+											<input type="submit" value="Update" class="btn mt-4"/>
 				      					</div>
                                     </form>
 			      					</div>
 			      				</div>
 								<div class="card-back">
 									<div class="center-wrap">
-                                        <form name="playerdetails" action="/playerDet" method="post">
+                                        <form name="playerdetails" action="/updatePlay" method="post">
 										<div class="section text-center" style="margin-top:-150px;">
                                             <div class="form-group mt-2" style="color: #c4c3ca;">
 												<input type="radio" name="gender" value="men" id="g" autocomplete="off" checked="True"> <label>Men</label> &emsp;
                                                 <input type="radio" name="gender" value="women" id="g" autocomplete="off"> <label>Women</label>
+												
 											</div>
                                             <div class="form-group">
 												<input type="text" name="name" class="form-style" placeholder="Player Name" id="name" autocomplete="off">
 												
 											</div>
-                                            <div class="form-group mt-2">
-												<input type="text" name="img" class="form-style" placeholder="Img src" id="img" autocomplete="off">
-												
-											</div>
+                                    
 											<div class="form-group">
 												<input type="text" name="jersey" class="form-style" placeholder="Jersey No." id="jersey" autocomplete="off">
 												
 											</div>	
 											</div>
-											<input type="submit" value="Submit" class="btn mt-4"/>
+											<input type="submit" value="Delete" class="btn mt-4"/>
 				      					</div>
                                     </form>
 			      					</div>

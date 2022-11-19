@@ -13,13 +13,13 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   </head>
 
-  <body>
-    <div id="main" class="main-container">
+  <body ng-app="prwpst" ng-controller="pctrl">
+    <div id="main" class="main-container" >
         <div class="box">
           <h2>Login</h2>
           <form name="login" action="/login" method="post">
@@ -31,10 +31,10 @@
               <input id="user-pass" type="password" name="pwd" required="">
               <label>Password</label>
             </div>
+            <!-- <span name="log" ng-show="log" style="color: red">Not a valid e-mail address </span> -->
             <input id="submit" type="submit" name="" value="Submit">
           </form>
           <br>
-          <span><a href="forget_pwd.html">Lost your password?</a></span>
           <span style="margin-left:40%"><a href="register.html">Register</a></span>
           <br><br>
           <center><span class="hov"><a href="index.html">Go to home</a></span></center>
@@ -45,6 +45,20 @@
         </div>
   </body>
   
+  <script type="text/javascript">
+    var app=angular.module('prwpst', []);
   
+    app.controller('pctrl', function($scope, $http) {
+      $http({
+              method: 'GET',
+              url: "http://localhost:3000/log"
+              }).then(function success(response) {
+                  console.log("response");
+                  }, function error(response) {
+                    console.log("err");
+                  }
+              );
+      });
+    </script>
 
 </html>
